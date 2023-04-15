@@ -1,0 +1,13 @@
+{{page-title "Application"}}
+
+{{#each @model as |car|}}
+  <ul>
+    <li>
+      <div>{{car.name}}</div>
+      <button
+        type="button"
+        {{on "click" (fn this.deleteCar car)}}
+      >Delete</button>
+    </li>
+  </ul>
+{{/each}}
